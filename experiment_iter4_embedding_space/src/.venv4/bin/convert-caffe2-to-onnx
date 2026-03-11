@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' /ai-inventor/aii_pipeline/runs/run__prmp_residual_passing_aju/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/.venv4/bin/python3.10 "$0" "$@"
+' '''
+import sys
+from caffe2.python.onnx.bin.conversion import caffe2_to_onnx
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(caffe2_to_onnx())

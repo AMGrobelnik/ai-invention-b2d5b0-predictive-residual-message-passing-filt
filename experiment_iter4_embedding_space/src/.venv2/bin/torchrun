@@ -1,0 +1,12 @@
+#!/bin/sh
+'''exec' '/ai-inventor/aii_pipeline/runs/run__prmp_residual_passing_aju/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/.venv2/bin/python3' "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import sys
+from torch.distributed.run import main
+if __name__ == "__main__":
+    if sys.argv[0].endswith("-script.pyw"):
+        sys.argv[0] = sys.argv[0][:-11]
+    elif sys.argv[0].endswith(".exe"):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())
